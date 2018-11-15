@@ -62,3 +62,36 @@ y_true =X
 
 loss = tf.reduce_mean(tf.pow(y_true-y_pred),2)
 optimizer = tf.train.RMSPropOptimizer(learning_rate).minimize(loss)
+
+init = tf.global_variables_initializer()
+with tf.Session() as sess:
+    sess.run(init)
+    for i in range(1,num_steps+1):
+        batch_x,_ = mnist.train.next_batch(batch_size)
+        _,l = sess.run([optimizer,loss],feed_dict={X:batch_x})
+        if i % display_step ==0 or i ==1:
+            print("Step %i: Minibatch Loss:%f"%(i,1))
+    n = 4
+    canvas_orig = np.empty((28*n,28*n))
+    canvas_recon = np.empty((28*n,28*n))
+    for i in range(n):
+        batch_x,_ = mnist.test.next_batch(n)
+        g = sess.run(decoder_op,feed_dict={X:batch_x})
+        # Display original images
+        for j in range(n):
+            canvas_orig[i*28:(i+1)*28,j*28:(j+1)*28] = batch_x[j].reshape([28,28])
+        for j in range(n):
+            canvas_recon[i*28:(i+1)*28,j*28:(j+1)*28]= g[j].reshape([28,28])
+    print("Original Images")
+    plt.figure(figsize=(n,n))
+    plt.show(canvas_orig,origin="upper",cmap="gray")
+    plt.show()
+
+    print("Reconstructed Images")
+    plt.figure(figsize=(n,n))
+    plt.imshow(canvas_recon,origin="upper",cmap="gray")
+    plt.show()
+
+
+
+
