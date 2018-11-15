@@ -60,4 +60,5 @@ decoder_op = decoder(encoder_op)
 y_pred = decoder_op
 y_true =X
 
-loss = tf.reduce_mean(tr.pow(y_true-))
+loss = tf.reduce_mean(tf.pow(y_true-y_pred),2)
+optimizer = tf.train.RMSPropOptimizer(learning_rate).minimize(loss)
