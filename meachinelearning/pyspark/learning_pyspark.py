@@ -8,8 +8,7 @@ __mtime__ = '2018/11/15'
 from pyspark import SparkContext
 from pyspark.sql import  SparkSession
 import os
-path = os.getcwd()
-
+filepath = os.getcwd()
 spark = SparkSession \
     .builder \
     .appName("test") \
@@ -111,6 +110,21 @@ swimmers.select('id','age').filter('age=22').show()
 swimmers.select("name","eyeColor").filter("eyeColor like '%b%'").show()
 
 # Set File Paths
+flightPerfFilePath = filepath+"\\flight-data\\departuredelays.csv"
+airportsFilePath = filepath +"\\flight-data\\airport-codes-na.txt"
+
+airports = spark.read.csv(airportsFilePath,header='true',inferSchema='true',
+                          sep ="\t")
+airports.createOrReplaceTempView("airports")
+
+flightPerf = spark.read.csv(flightPerfFilePath,header='true')
+flightPerf.createOrReplaceTempView("FlightPerformance")
+#Cache the Departure Delays dataset
+flightPerf.cache()
+spark.sql("select a.City, f.origin, sum(f.delay) as Delays from FlightPerformance f join airports a on a.IATA = f.origin where a.State = 'WA' group by a.City, f.origin order by sum(f.delay) desc").show()
+
+
+spark.sql("select a.State, sum(f.delay) as Delays from FlightPerformance f join airports a on a.IATA = f.origin where a.Country = 'USA' group by a.State ").show()
 
 
 
