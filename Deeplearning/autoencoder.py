@@ -38,10 +38,9 @@ biases = {
 }
 
 # Building the encoder
-def encoder(f):
+def encoder(x):
     layer_1 = tf.nn.sigmoid(tf.matmul(x,weights['encoder_h1'])),
-    layer_2 = tf.nn.sigmoid(tf.matmul(layer_1,weights['encoder_h2']),
-                            biases['encoder_b2']))
+    layer_2 = tf.nn.sigmoid(tf.matmul((layer_1,weights['encoder_h2']),biases['encoder_b2']))
     return layer_2
 
 # Building the decoder
