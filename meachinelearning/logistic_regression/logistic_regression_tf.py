@@ -3,7 +3,7 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-from tensorflow.example.tutorials.mnist import input_data
+from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("/tmp/data",one_hot=True)
 
 #Parameters
@@ -32,7 +32,7 @@ optimizer = tf.train.GradientDescentOptimizer()
 
 init = tf.global_variables_initializer()
 
-with tf.session() as sess:
+with tf.Session() as sess:
 	sess.run(init)
 
 	for epoch in range(training_epochs):

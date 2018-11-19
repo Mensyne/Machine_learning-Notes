@@ -14,12 +14,12 @@ if __name__ == '__main__':
 	parsedData = data.map(parsePoint)
 
 	# build the model
-	model = LinearRegressionWithSGD.train(parseData,iterations=100,step=0.0000001)
+	model = LinearRegressionWithSGD.train(parsedData,iterations=100,step=0.0000001)
 	# Evalute the model on training data
-	valuesAndPreds = parseData.map(lambda p:(p.label,model.predict(p.features))) 
+	valuesAndPreds = parsedData.map(lambda p:(p.label,model.predict(p.features)))
 	MSE = valuesAndPreds \
 		.map(lambda vp:(vp[0]-vp[1])**2) \
-		.reduce(lambda x,y:x+y)/valueAndPreds.count()
+		.reduce(lambda x,y:x+y)/valuesAndPreds.count()
 	print("Mean Squared Error = "+str(MSE))
 
 	# save and load model

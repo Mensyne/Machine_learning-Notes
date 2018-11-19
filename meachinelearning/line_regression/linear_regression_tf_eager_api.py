@@ -48,10 +48,10 @@ print('Initial cost ={:.9f}'.format(
 
 # Training
 for step in range(num_steps):
-	optimizer.apply_gradient(grad(linear_regression,trian_X,trian_Y))
+	Optimizer.apply_gradient(grad(linear_regression,train_X,train_Y))
 
 	if(step+1)%display_step ==0  or step ==0:
-		print("Epoch:",'%4d'%(step+1),"cost=","{:.9f}".format(mean_square_fn(linear_regression,trian_X,trian_Y)),
+		print("Epoch:",'%4d'%(step+1),"cost=","{:.9f}".format(mean_square_fn(linear_regression,train_X,train_Y)),
 			"W=",W.numpy(),"b=",b.numpy())
 
 plt.plot(train_X,train_Y,'ro',label= 'original data')		

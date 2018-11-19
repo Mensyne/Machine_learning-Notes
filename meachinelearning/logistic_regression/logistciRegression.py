@@ -7,12 +7,12 @@ def load_data(file_name):
 	label_data = []
 	for line in f.readlines():
 		feature_tmp = []
-		lable_tmp = []
+		label_tmp = []
 		lines = line.strip().split("\t")
 		feature_tmp.append(1)  # 偏置顶
 		for i in range(len(lines)-1):
 			feature_tmp.append(float(lines[i]))
-		lable_tmp.append(float(lines[-1]))
+		label_tmp.append(float(lines[-1]))
 
 		feature_data.append(feature_tmp)
 		label_data.append(label_tmp)
@@ -60,6 +60,6 @@ if __name__ == '__main__':
 	print("---------1. load data---------")
 	feature ,label = load_data('data.txt')
 	print("----------2. training ---------")
-	w = Ir_train_bgd(feature,label,1000,0.01)
+	w = lr_train_bgd(feature,label,1000,0.01)
 	print('----------3. save model -------')
 	save_model("weight",w)

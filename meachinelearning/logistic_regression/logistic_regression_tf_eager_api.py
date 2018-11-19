@@ -10,7 +10,7 @@ tfe = tf.contrib.eager
 
 
 # Import mnist data
-from tensorflow .examples.mnist import input_data
+from tensorflow .examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets('/tmp/data',one_hot=False)
 
 # parameters
