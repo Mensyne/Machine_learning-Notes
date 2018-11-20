@@ -6,7 +6,7 @@ import numpy as np
 import tensorflow as tf
 
 # set eager Api
-tf.enable_eager_executiuon()
+tf.enable_eager_execution()
 tfe = tf.contrib.eager
 
 
@@ -56,7 +56,7 @@ for step in range(num_steps):
 
 plt.plot(train_X,train_Y,'ro',label= 'original data')		
 plt.plot(train_X,np.array(W*train_X+b),label='Fitted line')
-plt.lengend()
+plt.legend()
 plt.show()
 
 
