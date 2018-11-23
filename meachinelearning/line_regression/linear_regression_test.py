@@ -12,6 +12,7 @@ import numpy as np
 import os
 os.chdir(r'E:\company_file\learning\Meachine_examples\meachinelearning\line_regression\data')
 
+
 if __name__ == "__main__":
 
     df = pd.read_csv('challenge_dataset.txt', names=['X','Y'])
