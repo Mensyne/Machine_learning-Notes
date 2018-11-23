@@ -6,9 +6,13 @@ import tensorflow as tf
 from tensorflow.contrib.factorization import KMeans
 
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = ""
+os.environ["CUDA_VISIBLE_DEVICES"] =
 
-from tensorflow.examples.tutorials.mnist import input_data
+
+from 
+
+
+
 mnist = input_data.read_data_sets("/tmp/data",one_hot=True)
 full_data_x= mnist.train.images
 
