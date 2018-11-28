@@ -14,14 +14,6 @@ import matplotlib.pyplot as plt
 class KNN():
     '''
     使用了两种距离来计算 一种是余弦距离 一种是欧式距离
-    :param self.k = kwargs.pop('k',1)
-    :param self.distance = kwargs.pop('distance','cosin')
-    :param self.train_data = kwargs.pop('train_data',None)
-    :param self.train_label = kwargs.pop('train_label',None)
-    :param self.test_data = kwargs.pop('test_data',None)
-    :param self.test_label
-    :param self.neighbor_data
-    :param self.neighbor_label
     '''
 
     def __init__(self,**kwargs):

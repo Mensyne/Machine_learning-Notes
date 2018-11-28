@@ -21,6 +21,7 @@ k = 25 # The number of clusters
 num_classes = 10 # The 10 digits
 num_features = 784 # Each image is 28x28 pixels
 
+
 # Input images
 X = tf.placeholder(tf.float32, shape=[None, num_features])
 # Labels (for assigning a label to a centroid and testing)
