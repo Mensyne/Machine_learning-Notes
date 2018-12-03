@@ -1,4 +1,4 @@
-# There is my notes  for study Meachine learning
+# notes  for  Meachine learning
 
 ## Files include:
 1. meachininglearning   
