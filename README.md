@@ -1,4 +1,4 @@
-# notes  for  Meachine learning
+# Notes  for  Meachine learning
 
 ## Files include:
 1. meachininglearning   
