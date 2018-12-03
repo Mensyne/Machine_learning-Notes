@@ -18,7 +18,7 @@ data = data.select([column for column in data.columns if column not in drop_list
 data.show(5)
 data.printSchema()
 
-from pyspark.sql.functions import col
+from pyspark.sql.functions import
 data.groupBy("Category") \
     .count() \
     .orderBy(col("count").desc()) \
