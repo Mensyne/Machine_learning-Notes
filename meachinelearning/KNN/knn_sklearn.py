@@ -11,7 +11,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-class KNN():
+class KNN:
     '''
     使用了两种距离来计算 一种是余弦距离 一种是欧式距离
     '''
