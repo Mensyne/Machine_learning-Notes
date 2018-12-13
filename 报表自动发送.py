@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 18 17:26:41 2018
-
-@author: guan
-"""
 
 # coding:utf8
 """
-日报
 """
 import smtplib
 import os
@@ -98,8 +92,8 @@ if __name__ == "__main__":
     my = MyEmail()
     my.user = "data.report@tsjinrong.cn"
     my.passwd = "Data@123"    
-    my.to_list =["wenjie@tsjinrong.cn","zhujunfeng@tsjinrong.cn","xiaoyongqing@tsjinrong.cn"]
-    my.cc_list =["liuguangyue@tsjinrong.cn","lisimin@tsjinrong.cn","linxinyi@tsjinrong.cn","huangdengfeng@tsjinrong.cn"]
+    my.to_list =["xx","xx","xx"]
+    my.cc_list =["xx","xx","xx","xx"]
     my.tag = "反欺诈数据%s-%s"%(m,d)
     my.content=content_text
     my.doc =aimname
