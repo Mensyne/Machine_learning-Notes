@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+# coding:utf-8
+# @Time :2018/11/18 20:22
+# @Author: Mensyne
+# @File :VAE-变分自编码.py
+
+
+
+
+=======
 # coding:utf-8
 # @Time :2018/11/18 20:22
 # @Author: Mensyne
@@ -103,3 +113,4 @@ with tf.Session() as sess:
 
 
 
+>>>>>>> b6089d0f8c26760dbece3f10fcb48100b66ed78a

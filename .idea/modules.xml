@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Meachine_examples.iml" filepath="$PROJECT_DIR$/.idea/Meachine_examples.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/Machine-Learning-Algorithms-master/.idea/Machine-Learning-Algorithms-master.iml" filepath="$USER_HOME$/Desktop/Machine-Learning-Algorithms-master/.idea/Machine-Learning-Algorithms-master.iml" />
+      <module fileurl="file://E:/github-files/MachineLearning/.idea/MachineLearning.iml" filepath="E:/github-files/MachineLearning/.idea/MachineLearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Meachine_learning.iml" filepath="$PROJECT_DIR$/.idea/Meachine_learning.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/machine_learning_examples/.idea/machine_learning_examples.iml" filepath="$USER_HOME$/Desktop/machine_learning_examples/.idea/machine_learning_examples.iml" />
     </modules>
   </component>
 </project>
