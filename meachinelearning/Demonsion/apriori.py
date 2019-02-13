@@ -169,7 +169,7 @@ def str2itemsets(strings, split=','):
 
 if __name__ == '__main__':
     # 1.导入数据
-    data = pd.read_excel(r'apriori算法实现.xlsx', index=False)
+    data = pd.read_excel(r'./apriori算法实现.xlsx', index=False)
 
     # 2.关联规则中不考虑多次购买同一件物品，删除重复数据
     data = data.drop_duplicates()
