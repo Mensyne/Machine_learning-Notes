@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import tensorflow as tf
 from tensorflow.contrib import  rnn
 import numpy as np
@@ -160,4 +158,4 @@ test_data = mnist.test.images[:test_len].reshape((-1, timesteps, num_input))
 test_label = mnist.test.labels[:test_len]
 print("Testing Accuracy:",
       sess.run(accuracy, feed_dict={X: test_data, Y: test_label}))
->>>>>>> b6089d0f8c26760dbece3f10fcb48100b66ed78a
+
